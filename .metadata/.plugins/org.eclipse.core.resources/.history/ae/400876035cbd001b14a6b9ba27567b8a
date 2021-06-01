@@ -1,0 +1,10 @@
+package in28minutes.introduction;
+
+public class FunctionalProgrammingIntroduction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

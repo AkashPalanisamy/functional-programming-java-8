@@ -1,0 +1,33 @@
+package in28minutes.stream;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+public class Sorted {
+
+	public static void main(String[] args) {
+		
+		List<Integer> integerArray = Arrays.asList(5,1,2,3,1,4,3,2,1,3);
+		
+		printSortedOfStream(integerArray);
+		System.out.println("-----------");
+		printDistinctSortedOfStream(integerArray);
+	}
+
+	private static void printDistinctSortedOfStream(List<Integer> integerArray) {
+		
+		integerArray.stream()
+					.distinct()
+					.sorted()
+					.forEach(System.out::println);		
+	}
+
+	private static void printSortedOfStream(List<Integer> integerArray) {
+		
+		integerArray.stream()
+					.sorted()
+					.sorted(Comparator.naturalOrder())
+					.forEach(System.out::println);		
+	}
+}

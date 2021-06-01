@@ -1,0 +1,10 @@
+package in28minutes.lambda;
+
+public class AdvancedFunctionalInterfaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

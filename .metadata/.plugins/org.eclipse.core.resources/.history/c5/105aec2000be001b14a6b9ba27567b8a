@@ -1,0 +1,65 @@
+package sap;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+
+public class MiniBattleShip {
+
+	public static void main(String[] args) {		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int gridSize = sc.nextInt();
+		int shipCount = sc.nextInt();
+		
+		char[][] grid = new char[gridSize][gridSize];
+		
+		Queue<String> stringQueue = new ArrayDeque<>();
+		
+		List<Integer> shipList = new ArrayList<>();
+		
+		/*
+		 * Obtaining the Ship Co-ordinates and 
+		 * storing them in a multi-dimensional array
+		 */
+		
+		for(int i=gridSize;i>0;i--) {			
+			stringQueue.add(sc.next());			
+		}		
+
+		for(int i=0;i<gridSize;i++) {			
+			String rowWise = stringQueue.poll();
+			char[] charArray = rowWise.toCharArray();
+			
+			for(int j=0;j<gridSize;j++) {				
+				grid[i][j] = charArray[j];				
+			}
+		}	
+		
+		/*
+		 * Obtaining Ship Sizes and 
+		 * Sorting them as per descending order
+		 */
+
+		
+		for(int i=0;i<shipCount;i++)
+			shipList.add(sc.nextInt());		
+		
+		shipList = shipList.stream()
+							.sorted(Comparator.reverseOrder())
+							.collect(Collectors.toList());
+		
+		sc.close();
+		/*
+		 * Logic for the BattleShip game 
+		 */
+
+
+	}
+}

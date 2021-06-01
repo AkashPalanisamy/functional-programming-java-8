@@ -1,0 +1,54 @@
+package sap;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+
+public class MiniBattleShip {
+
+	public static void main(String[] args) {		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int gridSize = sc.nextInt();
+		int shipCount = sc.nextInt();
+		
+		char[][] grid = new char[gridSize][gridSize];
+		
+		Queue<String> stringQueue = new ArrayDeque<>();
+		
+		for(int i=gridSize;i>0;i--) {			
+			stringQueue.add(sc.next());			
+		}		
+
+		for(int i=0;i<gridSize;i++) {			
+			String rowWise = stringQueue.poll();
+			char[] charArray = rowWise.toCharArray();
+			
+			for(int j=0;j<gridSize;j++) {				
+				grid[i][j] = charArray[j];				
+			}
+		}
+		
+		List<Integer> shipList = new ArrayList<>();
+		
+		shipList = shipList.stream()
+							.sorted(Comparator.reverseOrder())
+							.collect(Collectors.toList());
+		
+		
+
+		
+		
+		/*
+		 * Logic for the BattleShip game 
+		 */
+
+
+	}
+}

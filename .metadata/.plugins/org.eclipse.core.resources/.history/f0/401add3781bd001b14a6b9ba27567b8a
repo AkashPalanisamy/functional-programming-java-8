@@ -1,0 +1,29 @@
+package in28minutes.stream;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Reduce {
+
+	public static void main(String[] args) {		
+		
+		List<Integer> integerArray = Arrays.asList(4, 56, 33, 12, 7, 8, 2, 4);
+		
+		int sum = reduceMethodOfStream(integerArray);
+		
+		System.out.println(sum);
+	}
+
+	private static int reduceMethodOfStream(List<Integer> integerArray) {
+		
+		return integerArray.stream()
+						 //.reduce(0, Reduce::sum);
+						 //.reduce(0,(x,y)-> x+y);
+						   .reduce(0,Integer::sum);
+	}
+	
+//	private static int sum(int a, int b) {
+//		
+//		return a+b;
+//	}	
+}

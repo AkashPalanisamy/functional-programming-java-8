@@ -1,0 +1,18 @@
+package in28minutes.lambda;
+
+import java.util.function.BiPredicate;
+
+public class AdvancedFunctionalInterfaces {
+
+	public static void main(String[] args) {
+		
+		BiPredicate<Integer,String> checkCondition = (i,s) -> {
+	
+			return i<10 && s.length()>5;
+		};
+			System.out.println(checkCondition.test(40, "forty"));
+		
+
+	}
+
+}

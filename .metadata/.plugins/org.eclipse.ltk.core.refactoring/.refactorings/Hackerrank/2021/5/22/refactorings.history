@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;SAP&apos; to &apos;sap&apos;&#x0D;&#x0A;- Original project: &apos;Hackerrank&apos;&#x0D;&#x0A;- Original element: &apos;Hackerrank/src/SAP&apos;&#x0D;&#x0A;- Renamed element: &apos;Hackerrank/src/sap&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;SAP&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;SAP" name="sap" qualified="false" references="true" stamp="1622016770349" textual="false" version="1.0"/>
+</session>

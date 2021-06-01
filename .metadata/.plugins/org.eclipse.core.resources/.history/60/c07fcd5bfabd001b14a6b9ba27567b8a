@@ -1,0 +1,17 @@
+package sap;
+
+import java.util.Scanner;
+
+public class MiniBattleShip {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int gridSize = sc.nextInt();
+		int shipCount = sc.nextInt();
+
+	}
+
+}

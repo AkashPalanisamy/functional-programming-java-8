@@ -1,0 +1,24 @@
+package in28minutes.stream;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Distinct {
+
+	public static void main(String[] args) {
+		
+		List<Integer> integerArray = Arrays.asList(4, 6, 3, 12, 7, 8, 21, 4);
+		
+		printDistinctOfStream(integerArray);
+
+	}
+
+	private static void printDistinctOfStream(List<Integer> integerArray) {
+		
+		integerArray.stream()
+					.distinct()
+					.forEach(System.out::println);
+		
+	}
+
+}

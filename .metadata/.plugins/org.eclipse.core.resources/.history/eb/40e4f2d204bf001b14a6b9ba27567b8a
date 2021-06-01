@@ -1,0 +1,24 @@
+package in28minutes.lambda;
+
+import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
+
+public class AdvancedFunctionalInterfaces {
+
+	public static void main(String[] args) {
+		
+		// BiPredicate accepts 2 inputs with different data types
+		// However the output is by default "boolean" only
+		
+		BiPredicate<Integer,String> checkCondition = (i,s) -> {
+	
+			return i<10 && s.length()>5;
+		};
+			System.out.println(checkCondition.test(40, "forty"));
+			
+		
+		BiFunction<Integer,Integer,String> toString = (a,b) -> Integer.toString(a+b);
+
+	}
+
+}

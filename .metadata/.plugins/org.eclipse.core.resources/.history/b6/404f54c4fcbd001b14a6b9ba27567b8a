@@ -1,0 +1,38 @@
+package sap;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class MiniBattleShip {
+
+	public static void main(String[] args) {		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int gridSize = sc.nextInt();
+		int shipCount = sc.nextInt();
+		
+		String[][] grid = new String[gridSize][gridSize];
+		
+		List<String> stringList = new ArrayList<>();
+		Queue<String> stringQueue = new ArrayDeque<>();
+		
+		for(int i=gridSize;i>0;i--) {
+			
+			stringQueue.add(sc.next());			
+		}
+		
+		//System.out.println(stringQueue);
+		System.out.println("------");
+		for(int i=0;i<gridSize;i++) {
+			System.out.println(stringQueue.poll());
+		}
+		
+
+
+	}
+
+}

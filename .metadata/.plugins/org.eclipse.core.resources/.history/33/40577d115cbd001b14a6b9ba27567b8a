@@ -1,0 +1,27 @@
+package in28minutes.introduction;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class FunctionalProgrammingIntroduction {
+
+	public static void main(String[] args) {
+
+		List<Integer> integerArray = Arrays.asList(4, 56, 33, 12, 7, 8, 2, 4);
+
+//		List<String> stringArray = Arrays.asList("Batman", "Superman", "Wonder woman",
+//				"Green Lantern", "Flash","Martian", "Cyborg");
+		
+		streamWithIntegers(integerArray);
+
+	}
+
+	private static void streamWithIntegers(List<Integer> integerArray) {
+		
+		integerArray.stream()
+					.filter(n -> n%2 ==0)
+					.forEach(System.out::print);			
+		
+	}
+
+}

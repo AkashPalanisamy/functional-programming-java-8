@@ -1,0 +1,25 @@
+package in28minutes.lambda;
+
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+public class BasicFunctionalInterfaces {
+
+	public static void main(String[] args) {
+
+		Predicate<Integer> isEven = x -> x%2 ==0;	
+			System.out.println(isEven.test(40));
+			
+		Function<Integer,String> toString = x -> Integer.toString(x) ;
+			System.out.println(toString.apply(50));
+		
+		Consumer<Integer> printOnly = x -> System.out.println("--- "+x+" ---");
+			printOnly.accept(60);
+		
+		Supplier<Integer> noInputNeeded = () -> 70;
+			System.out.println(noInputNeeded.get());
+	}
+
+}
